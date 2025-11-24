@@ -53,13 +53,11 @@
 
         <!-- Date, Age, Email & Telephone -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- Date -->
           <div>
             <label for="visitDate" class="block text-sm font-medium text-gray-700">Date</label>
             <input type="date" id="visitDate" name="visitDate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 bg-white">
           </div>
 
-          <!-- Age Range -->
           <div>
             <label for="ageRange" class="block text-sm font-medium text-gray-700">Age Range</label>
             <select id="ageRange" name="ageRange" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 bg-white">
@@ -71,16 +69,15 @@
             </select>
           </div>
 
-          <!-- Email -->
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
             <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 bg-white" placeholder="you@example.com">
           </div>
 
-          <!-- Telephone Number -->
           <div>
             <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required pattern="0\d{3}\s\d{3}\s\d{4}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 bg-white" placeholder="0805 057 7053">
+            <input type="tel" id="phone" name="phone" required pattern="0\d{3}[\s]?\d{3}[\s]?\d{4}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 bg-white" placeholder="0805 057 7053">
+            <small class="text-gray-500">Format: 08050577053 or 0805 057 7053</small>
           </div>
         </div>
 
