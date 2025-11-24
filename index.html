@@ -6,11 +6,15 @@
   <title>Glory Tabernacle Family Church - Welcome</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Welcome to Glory Tabernacle Family Church. Fill out our visitor connection card.">
   <style>
     body { font-family: 'Inter', sans-serif; }
     .hidden { display: none !important; }
     .fade-in { animation: fadeIn 0.5s ease-in; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-900 antialiased min-h-screen py-8 px-4">
@@ -47,8 +51,15 @@
           </div>
         </div>
 
-        <!-- Age & Email -->
+        <!-- Date, Age, Email & Telephone -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Date -->
+          <div>
+            <label for="visitDate" class="block text-sm font-medium text-gray-700">Date</label>
+            <input type="date" id="visitDate" name="visitDate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 bg-white">
+          </div>
+
+          <!-- Age Range -->
           <div>
             <label for="ageRange" class="block text-sm font-medium text-gray-700">Age Range</label>
             <select id="ageRange" name="ageRange" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 bg-white">
@@ -59,9 +70,17 @@
               <option value="70+">70+ (Elder)</option>
             </select>
           </div>
+
+          <!-- Email -->
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2">
+            <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 bg-white" placeholder="you@example.com">
+          </div>
+
+          <!-- Telephone Number -->
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required pattern="0\d{3}\s\d{3}\s\d{4}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 bg-white" placeholder="0805 057 7053">
           </div>
         </div>
 
